@@ -1,4 +1,4 @@
-/* CSS TABLE OF CONTENTS 
+* /* CSS TABLE OF CONTENTS 
   # GLOBALS
     # RESET
     # COLORS
@@ -83,15 +83,36 @@ img {
     border-color: rgba(0, 0, 0, 1);
 }
 
-/* LAYOUT */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
 
-  /* STRUCTURE */
 
-  .site-header,
+/* BESPOKE LAYOUT STRUCTURE */
+
+ body {
+     min-height: 100vh;;
+     display: grid;
+     grid-template-rows: auto 1fr auto;
+ }
+
+ main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+  /* MAIN CONTENT */
+main { padding: 5em 0; }
+section {
+  padding: 2em;
+  min-height: 90vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+ /* SITE STRUCTURE */
+
+   .site-header,
   .site-footer {
     text-align: center;
     margin: 1em 0;
@@ -123,7 +144,8 @@ img {
   .site-header h1 a:hover {
     color: rgba(0, 0, 0, 1);
   }
-  
+
+  /* SITE NAV */
   /* SITE NAV */
   .site-navigation ul {
     padding: 0;
@@ -154,19 +176,7 @@ img {
     border-bottom: 2px solid rgba(0, 0, 0, 0.5);
   }
 
-  /* MAIN CONTENT */
-main { padding: 5em 0; }
-section {
-  padding: 2em;
-  min-height: 90vh;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-/* FEATURED PROJECTS ON HOME PAGE */
+  /* FEATURED PROJECTS ON HOME PAGE */
 @media (min-width: 768px) {
 
   .featuredproject {
@@ -190,53 +200,12 @@ section {
 }
 
 
-/* BESPOKE LAYOUT STRUCTURE */
-
-/* FLEX-BOX MAIN LAYOUT */
-/* body { 
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}  main { flex-grow: 1; } */
-
-
- body {
-     min-height: 100vh;;
-     display: grid;
-     grid-template-rows: auto 1fr auto;
- }
-
- .site-header {
-     display: flex;
-     justify-content: space-between;
- }
-
- /* .site-header {
-     display: grid;
-     grid-template-columns: auto 1fr;
- } */
-
- /* main {
-     display: grid;
-     align-items: center;
- } */
-
- main {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
-
 /* FOR LOCAL DEV TESTING */
 * {
-    /* margin: 0; padding: 0;
-    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 1) !important;
-    background-color: rgba(146, 21, 21, 0.05) !important;
-    color: rgba(0, 0, 0, .4) !important; 
-    background-image: none !important;
-    border-color: rgba(0,0,0,0) !important; */
+    /* margin: 0;
+    padding: 0;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1) !important;
+    background-color: rgba(0,0,0,.1) !important; */
 }
 
 /* body { background-color: rgba(255,255,0,.2) !important; }
